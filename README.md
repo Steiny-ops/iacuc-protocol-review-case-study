@@ -31,6 +31,7 @@ Five roles, very different systems:
 | Researcher (PI) | Only their own protocols; only revision requests actually sent to them | Submits immutable responses; does not edit the protocol record at all |
 | Chair | Everything | Reviews and classifies each new protocol and assigns its reviewers at the front of the workflow, and approves the protocol at the end; alters nothing between those two points |
 | Oversight | Everything, including coordinator working notes | Nothing; view-only across the entire system |
+| Vet | Can See Protocols When Assigned | Can provide comments in Notes , comments can be on pain management, Housing etc |
 
 Visibility is enforced by security filters (rows a role cannot see are never loaded to their device, data-level privacy, not hidden UI). Mutation is enforced separately by action conditions and column-level editability. Keeping those two layers distinct was one of the central lessons: **visibility rules and mutation rules fail independently, and auditing one tells you nothing about the other.** Adding the view-only Oversight role made this concrete: granting it read access to every table exposed a set of note-management actions that had never carried role conditions, because they had relied on a security filter to stay hidden. View-only is not achieved by withholding views; it is achieved by withholding every mutating action, which must be verified action by action.
 
