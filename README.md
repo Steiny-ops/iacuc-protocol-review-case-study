@@ -207,7 +207,7 @@ Not everything is closed, and the open items are as instructive as the closed on
 - No live protocol has yet been processed, so real-world volume and edge cases are still ahead, and the extraction step's provider must be settled before live data reaches it.
 - The oversight path awaits its session with the people who will hold those roles, and the coordinator path awaits a second person.
 
-See [docs/lessons-learned.md](docs/lessons-learned.md) for the engineering lessons, which are the genuinely transferable output.
+See [lessons-learned.md](lessons-learned.md) for the engineering lessons, which are the genuinely transferable output.
 
 ## Author
 
